@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="70dp">
+
+
+    <TextView
+        android:layout_width="50dp"
+        android:id="@+id/id_item_progress_number"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="8"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:layout_marginLeft="12dp"
+        android:layout_height="50dp"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/id_item_progress_result"
+        android:text="45 км/ч"
+        android:textStyle="italic"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:layout_width="223dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp" />
+
+    <ImageView
+        android:id="@+id/id_item_progress_image_dinamics"
+        android:layout_width="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_height="50dp"/>
+
+</LinearLayout>

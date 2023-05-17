@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "161898093732",
+    "project_id": "football7onesignal",
+    "storage_bucket": "football7onesignal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161898093732:android:4b7eac5caf2f9da9b99a31",
+        "android_client_info": {
+          "package_name": "com.example.football7"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161898093732-1iu7n3sae2i5ehk9kusce90jmslstfkh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHo8QoA_rBDrQYrsbCEwo1-W_LQ3x-wbs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161898093732-1iu7n3sae2i5ehk9kusce90jmslstfkh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

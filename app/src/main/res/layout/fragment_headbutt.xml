@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.HeadbuttFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:text="headbutts in football"
+        android:layout_height="100dp"/>
+
+    <LinearLayout
+        android:background="@drawable/emblemaheadbutt"
+        android:layout_width="350dp"
+
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_height="350dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="229dp"
+            android:id="@+id/id_headbutt_button_progress"
+            android:text="view progress"
+            android:textSize="19dp"
+            android:textColor="@color/white"
+            android:background="#ee2323"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="120dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="229dp"
+            android:background="#ee2323"
+            android:text="headbutt training"
+            android:textSize="19dp"
+            android:id="@+id/id_headbutt_button_training"
+            android:textColor="@color/white"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="229dp"
+            android:layout_height="50dp"
+            android:id="@+id/id_headbutt_button_best"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="#ee2323"
+            android:text="the best football players"
+            android:textColor="@color/white"
+            android:textSize="19dp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

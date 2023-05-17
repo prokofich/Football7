@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".view.TrainingFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/id_training_name_player1"
+                android:layout_width="250dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Фамилия имя:"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="70dp"/>
+
+            <TextView
+                android:id="@+id/id_training_text1"
+                android:layout_width="335dp"
+                android:textColor="@color/black"
+                android:text="239874284"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/id_training_name_player2"
+                android:layout_width="250dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Фамилия имя:"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="70dp"/>
+
+            <TextView
+                android:id="@+id/id_training_text2"
+                android:layout_width="335dp"
+                android:textColor="@color/black"
+                android:text="239874284"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/id_training_name_player3"
+                android:layout_width="250dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Фамилия имя:"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="70dp"/>
+
+            <TextView
+                android:id="@+id/id_training_text3"
+                android:layout_width="335dp"
+                android:textColor="@color/black"
+                android:text="239874284"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

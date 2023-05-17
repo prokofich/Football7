@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="100dp">
+
+    <ImageView
+        android:id="@+id/id_item_player_image_player"
+        android:layout_width="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:layout_height="80dp"/>
+
+    <TextView
+        android:id="@+id/id_item_player_name"
+        android:layout_width="186dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:text="C.Ronaldo"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:id="@+id/id_item_player_image_club"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_height="70dp"/>
+
+</LinearLayout>
