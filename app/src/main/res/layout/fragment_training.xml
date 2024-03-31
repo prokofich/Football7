@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".view.TrainingFragment">
+    tools:context=".view.fragments.TrainingFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
                 android:layout_width="250dp"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="Фамилия имя:"
+
                 android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -30,7 +30,6 @@
                 android:id="@+id/id_training_text1"
                 android:layout_width="335dp"
                 android:textColor="@color/black"
-                android:text="239874284"
                 android:textSize="20dp"
                 android:textStyle="italic"
                 android:layout_height="wrap_content"
@@ -42,7 +41,6 @@
                 android:layout_width="250dp"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="Фамилия имя:"
                 android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -52,7 +50,6 @@
                 android:id="@+id/id_training_text2"
                 android:layout_width="335dp"
                 android:textColor="@color/black"
-                android:text="239874284"
                 android:textSize="20dp"
                 android:textStyle="italic"
                 android:layout_height="wrap_content"
@@ -64,7 +61,6 @@
                 android:layout_width="250dp"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="Фамилия имя:"
                 android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -74,7 +70,6 @@
                 android:id="@+id/id_training_text3"
                 android:layout_width="335dp"
                 android:textColor="@color/black"
-                android:text="239874284"
                 android:textSize="20dp"
                 android:textStyle="italic"
                 android:layout_height="wrap_content"

@@ -1,4 +1,4 @@
-package com.example.football7.model
+package com.example.football7.model.modelDataFromServer
 
 import androidx.annotation.Keep
 

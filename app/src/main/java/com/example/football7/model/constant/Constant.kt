@@ -1,6 +1,8 @@
-package com.example.football7
+package com.example.football7.model.constant
 
-lateinit var MAIN:MainActivity
+import com.example.football7.view.activity.MainActivity
+
+lateinit var MAIN: MainActivity
 
 const val HEADBUTT = "HEADBUTT"
 const val RUNNING = "RUNNING"

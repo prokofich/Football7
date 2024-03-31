@@ -1,8 +1,9 @@
-package com.example.football7.api
+package com.example.football7.model.repository
 
-import com.example.football7.model.Player
-import com.example.football7.model.ResponceWebView
-import com.example.football7.model.Training
+import com.example.football7.model.api.RetrofitInstance
+import com.example.football7.model.modelDataFromServer.Player
+import com.example.football7.model.modelDataFromServer.ResponceWebView
+import com.example.football7.model.modelDataFromServer.Training
 import retrofit2.Response
 
 class Repository {

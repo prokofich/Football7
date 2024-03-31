@@ -1,30 +1,37 @@
-package com.example.football7.view
+package com.example.football7.view.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.football7.*
-import com.example.football7.adapter.ProgressAdapter
-import kotlinx.android.synthetic.main.fragment_progress.*
+import com.example.football7.databinding.FragmentProgressBinding
+import com.example.football7.model.adapter.ProgressAdapter
+import com.example.football7.model.constant.GOALKEEPER
+import com.example.football7.model.constant.HEADBUTT
+import com.example.football7.model.constant.MAIN
+import com.example.football7.model.constant.RUNNING
+import com.example.football7.model.constant.titleGoalkeeperToProgress
+import com.example.football7.model.constant.titleHeadbuttToProgress
+import com.example.football7.model.constant.titleRunningToProgress
 
 class ProgressFragment : Fragment() {
 
-    lateinit var recyclerViewProgress: RecyclerView
-    lateinit var adapterProgress: ProgressAdapter
+    private var binding: FragmentProgressBinding? = null
 
-    var listToResult = ArrayList<String?>()
+    private var recyclerViewProgress: RecyclerView? = null
+    private var adapterProgress: ProgressAdapter? = null
 
-    var valueToKey = ""
+    private var listToResult = ArrayList<String?>()
+    private var valueToKey = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_progress, container, false)
+        binding = FragmentProgressBinding.inflate(inflater, container, false)
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -32,55 +39,52 @@ class ProgressFragment : Fragment() {
 
         valueToKey = requireArguments().getString("key")!!
 
-        recyclerViewProgress = id_rv_progress
+        recyclerViewProgress = binding?.idRvProgress
         adapterProgress = ProgressAdapter(requireContext())
-        recyclerViewProgress.adapter = adapterProgress
+        recyclerViewProgress?.adapter = adapterProgress
 
         when(valueToKey){
             RUNNING -> {
                 if(MAIN.getList("keyRunning",requireContext()) != null){
                     listToResult = MAIN.getList("keyRunning",requireContext())!!
-                    adapterProgress.setList(listToResult,valueToKey)
+                    adapterProgress?.setList(listToResult,valueToKey)
                 }
             }
             GOALKEEPER -> {
                 if(MAIN.getList("keyGoalkeeper",requireContext()) != null){
                     listToResult = MAIN.getList("keyGoalkeeper",requireContext())!!
-                    adapterProgress.setList(listToResult,valueToKey)
+                    adapterProgress?.setList(listToResult,valueToKey)
                 }
             }
             HEADBUTT -> {
                 if(MAIN.getList("keyHeadbutt",requireContext()) != null){
                     listToResult = MAIN.getList("keyHeadbutt",requireContext())!!
-                    adapterProgress.setList(listToResult,valueToKey)
+                    adapterProgress?.setList(listToResult,valueToKey)
                 }
             }
         }
 
-
-
-
         when(valueToKey){
             RUNNING -> {
-                id_progress_title.text = titleRunningToProgress
+                binding?.idProgressTitle?.text = titleRunningToProgress
             }
             GOALKEEPER -> {
-                id_progress_title.text = titleGoalkeeperToProgress
+                binding?.idProgressTitle?.text = titleGoalkeeperToProgress
             }
             HEADBUTT -> {
-                id_progress_title.text = titleHeadbuttToProgress
+                binding?.idProgressTitle?.text = titleHeadbuttToProgress
             }
         }
 
-        id_progress_button_add.setOnClickListener {
-            val result = id_progress_et.text.toString()
-            id_progress_et.setText("")
-            adapterProgress.addResultInList(result,valueToKey)
+        binding?.idProgressButtonAdd?.setOnClickListener {
+            val result = binding?.idProgressEt?.text.toString()
+            binding?.idProgressEt?.setText("")
+            adapterProgress?.addResultInList(result,valueToKey)
             listToResult.add(result)
         }
 
     }
-    ////////////////////////////////////////////////////////////////////////////////////////////////
+
     override fun onStop() {
         super.onStop()
 
@@ -95,12 +99,14 @@ class ProgressFragment : Fragment() {
                 MAIN.saveList(listToResult,"keyHeadbutt",requireContext())
             }
         }
-
         listToResult.clear()
         valueToKey = ""
 
     }
-    ////////////////////////////////////////////////////////////////////////////////////////////////
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
+    }
 
 }

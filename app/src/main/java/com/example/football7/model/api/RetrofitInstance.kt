@@ -1,4 +1,4 @@
-package com.example.football7.api
+package com.example.football7.model.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

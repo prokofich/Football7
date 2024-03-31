@@ -11,7 +11,6 @@
         android:textStyle="bold"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="8"
         android:textColor="@color/black"
         android:textSize="35dp"
         android:layout_marginLeft="12dp"
@@ -20,7 +19,6 @@
     <TextView
         android:gravity="center"
         android:id="@+id/id_item_progress_result"
-        android:text="45 км/ч"
         android:textStyle="italic"
         android:textSize="25dp"
         android:textColor="@color/black"

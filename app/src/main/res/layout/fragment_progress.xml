@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".view.ProgressFragment">
+    tools:context=".view.fragments.ProgressFragment">
 
     <TextView
         android:id="@+id/id_progress_title"
