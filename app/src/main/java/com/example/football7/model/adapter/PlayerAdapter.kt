@@ -5,11 +5,12 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.football7.R
 import com.example.football7.model.modelDataFromServer.PlayerItem
-import kotlinx.android.synthetic.main.item_best_player.view.*
 
 class PlayerAdapter(private val context: Context) : RecyclerView.Adapter<PlayerAdapter.PlayerViewHolder>() {
 
@@ -23,13 +24,19 @@ class PlayerAdapter(private val context: Context) : RecyclerView.Adapter<PlayerA
     }
 
     override fun onBindViewHolder(holder: PlayerViewHolder, position: Int) {
+
+        val textViewName = holder.itemView.findViewById<TextView>(R.id.id_item_player_name)
+        val imageViewPlayer = holder.itemView.findViewById<ImageView>(R.id.id_item_player_image_player)
+        val imageViewClub = holder.itemView.findViewById<ImageView>(R.id.id_item_player_image_club)
+
         Glide.with(context)
             .load(listPlayers[position].image)
-            .into(holder.itemView.id_item_player_image_player)
+            .into(imageViewPlayer)
         Glide.with(context)
             .load(listPlayers[position].club)
-            .into(holder.itemView.id_item_player_image_club)
-        holder.itemView.id_item_player_name.text = listPlayers[position].name
+            .into(imageViewClub)
+        textViewName.text = listPlayers[position].name
+
     }
 
     override fun getItemCount(): Int {

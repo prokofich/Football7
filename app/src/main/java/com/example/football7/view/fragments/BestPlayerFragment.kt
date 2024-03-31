@@ -9,12 +9,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.football7.model.constant.GOALKEEPER
 import com.example.football7.model.constant.HEADBUTT
-import com.example.football7.R
 import com.example.football7.databinding.FragmentBestPlayerBinding
 import com.example.football7.model.constant.RUNNING
 import com.example.football7.model.adapter.PlayerAdapter
 import com.example.football7.viewmodel.BestPlayerViewModel
-import kotlinx.android.synthetic.main.fragment_best_player.*
 
 class BestPlayerFragment : Fragment() {
 

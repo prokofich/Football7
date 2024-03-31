@@ -7,10 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.football7.model.constant.GOALKEEPER
 import com.example.football7.model.constant.MAIN
-import com.example.football7.R
-import com.example.football7.databinding.FragmentBestPlayerBinding
 import com.example.football7.databinding.FragmentGoalkeeperSaveBinding
-import kotlinx.android.synthetic.main.fragment_goalkeeper_save.*
 
 class GoalkeeperSaveFragment : Fragment() {
 

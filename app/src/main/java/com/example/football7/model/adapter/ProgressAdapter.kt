@@ -5,13 +5,14 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.football7.*
 import com.example.football7.model.constant.GOALKEEPER
 import com.example.football7.model.constant.HEADBUTT
 import com.example.football7.model.constant.RUNNING
-import kotlinx.android.synthetic.main.item_progress.view.*
 
 class ProgressAdapter(private val context: Context):RecyclerView.Adapter<ProgressAdapter.ProgressViewHolder>() {
 
@@ -25,32 +26,38 @@ class ProgressAdapter(private val context: Context):RecyclerView.Adapter<Progres
         return  ProgressViewHolder(view)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ProgressViewHolder, position: Int) {
+
+        val imageViewProgress = holder.itemView.findViewById<ImageView>(R.id.id_item_progress_image_dinamics)
+        val textViewResult = holder.itemView.findViewById<TextView>(R.id.id_item_progress_result)
+        val textViewNumber = holder.itemView.findViewById<TextView>(R.id.id_item_progress_number)
+
         if(position!=0 && listProgress[position]!! > listProgress[position-1]!!){
             Glide.with(context)
                 .load(R.drawable.ic_result_up)
-                .into(holder.itemView.id_item_progress_image_dinamics)
+                .into(imageViewProgress)
         }
 
         if(position!=0 && listProgress[position]!! <= listProgress[position-1]!!){
             Glide.with(context)
                 .load(R.drawable.ic_result_down)
-                .into(holder.itemView.id_item_progress_image_dinamics)
+                .into(imageViewProgress)
         }
 
         when(valueToKey){
             RUNNING -> {
-                holder.itemView.id_item_progress_result.text = listProgress[position].toString() + " s"
+                textViewResult.text = listProgress[position].toString() + " s"
             }
             GOALKEEPER -> {
-                holder.itemView.id_item_progress_result.text = listProgress[position].toString() + " saves"
+                textViewResult.text = listProgress[position].toString() + " saves"
             }
             HEADBUTT -> {
-                holder.itemView.id_item_progress_result.text = listProgress[position].toString() + " goals"
+                textViewResult.text = listProgress[position].toString() + " goals"
             }
         }
 
-        holder.itemView.id_item_progress_number.text = (position+1).toString()
+        textViewNumber.text = (position+1).toString()
 
     }
 

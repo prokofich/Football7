@@ -6,12 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.football7.model.constant.HEADBUTT
-import com.example.football7.model.constant.MAIN
-import com.example.football7.R
-import com.example.football7.databinding.FragmentGoalkeeperSaveBinding
 import com.example.football7.databinding.FragmentHeadbuttBinding
-import kotlinx.android.synthetic.main.fragment_headbutt.*
-
+import com.example.football7.model.constant.MAIN
 
 class HeadbuttFragment : Fragment() {
 

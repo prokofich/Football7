@@ -8,12 +8,9 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.example.football7.model.constant.GOALKEEPER
 import com.example.football7.model.constant.HEADBUTT
-import com.example.football7.R
-import com.example.football7.databinding.FragmentRunningSpeedBinding
 import com.example.football7.databinding.FragmentTrainingBinding
 import com.example.football7.model.constant.RUNNING
 import com.example.football7.viewmodel.TrainingViewModel
-import kotlinx.android.synthetic.main.fragment_training.*
 
 class TrainingFragment : Fragment() {
 
